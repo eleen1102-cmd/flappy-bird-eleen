@@ -2,17 +2,35 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //test
-    //test again
-    void Start()
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
+    private Rigidbody2D body;
+    private PolygonCollider2D polygonCollider;
+    private float horizontalInput;
+    
+    //awake is called everytime tbe script is loaded
+  private void Awake()
     {
-        
+        //grab references for rigidbody and animator 
+        body = GetComponent<Rigidbody2D>(); //finds rigibody2D and will store it in the body
+        polygonCollider = GetComponent<PolygonCollider2D>();
+    
     }
 
-    // Update is called once per frame
-    void Update()
+    //update method to check if the player is moving left or right. this is a built in method. runs for every frama of the game makes sure inputs are recorded
+    private void Update()
     {
-        
+        horizontalInput = Input.GetAxis("Horizontal"); //idk if i actually need this rn
+
+        if (Input.GetKey(KeyCode.Space))
+            Jump();
+
+
+
+    }
+
+    private void Jump()
+    {
+        body.linearVelocity = new Vector2(body.linearVelocityX, jumpPower);
     }
 }
