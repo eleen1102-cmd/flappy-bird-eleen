@@ -1,5 +1,7 @@
 using UnityEngine;
-
+//NEED TO ADD: 
+//animations 
+//stop bird from tilting over (or control the tilting since it is actually in flappy bird)
 public class BirdMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
