@@ -9,6 +9,8 @@ public class BirdMovement : MonoBehaviour
     private Rigidbody2D body;
     private PolygonCollider2D polygonCollider;
     private float horizontalInput;
+    private Animator anim;
+    
     
     //awake is called everytime tbe script is loaded
   private void Awake()
@@ -16,10 +18,10 @@ public class BirdMovement : MonoBehaviour
         //grab references for rigidbody and animator 
         body = GetComponent<Rigidbody2D>(); //finds rigibody2D and will store it in the body
         polygonCollider = GetComponent<PolygonCollider2D>();
-    
+        anim = GetComponent<Animator>();
     }
 
-    //update method to check if the player is moving left or right. this is a built in method. runs for every frama of the game makes sure inputs are recorded
+   
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal"); //idk if i actually need this rn
@@ -34,5 +36,6 @@ public class BirdMovement : MonoBehaviour
     private void Jump()
     {
         body.linearVelocity = new Vector2(body.linearVelocityX, jumpPower);
+        anim.SetTrigger("jump");
     }
 }
