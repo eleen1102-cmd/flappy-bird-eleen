@@ -1,6 +1,11 @@
 using UnityEngine;
 using TMPro; //needed for text mesh pro library
 using UnityEngine.SceneManagement; //to reset the scene 
+
+//NEED TO FIX:
+//make pipes spawn faster
+//make score work
+//make collision with pipes work (might have to do with rb)
 public class BirdMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
