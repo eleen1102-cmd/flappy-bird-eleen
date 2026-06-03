@@ -35,7 +35,7 @@ public class BirdMovement : MonoBehaviour
 
     private void Jump()
     {
-        body.linearVelocity = new Vector2(body.linearVelocityX, jumpPower);
+        body.linearVelocity = new Vector2(0, jumpPower);
         anim.SetTrigger("jump");
     }
 }

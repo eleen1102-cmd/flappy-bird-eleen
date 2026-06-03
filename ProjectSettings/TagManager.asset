@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - ScoreTrigger
   layers:
   - Default
   - TransparentFX
@@ -44,14 +45,14 @@ TagManager:
   - name: Background
     uniqueID: 1804035189
     locked: 0
-  - name: Foreground
-    uniqueID: 2697304401
-    locked: 0
   - name: Player
     uniqueID: 3241506187
     locked: 0
   - name: Ground
     uniqueID: 3775199801
+    locked: 0
+  - name: Foreground
+    uniqueID: 3055666847
     locked: 0
   m_RenderingLayers:
   - Default
