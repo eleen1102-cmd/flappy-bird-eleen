@@ -6,7 +6,7 @@ public class ObstacleMovement : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //making the pipes drift to the left
         transform.position = Vector2.Lerp(transform.position, new Vector2(transform.position.x - moveSpeed, transform.position.y), 0.1f); //0.1f is how fast we interpolate
