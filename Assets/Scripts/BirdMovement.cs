@@ -36,7 +36,7 @@ public class BirdMovement : MonoBehaviour
     }
 
    
-    private void FixedUpdate()
+    private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal"); //idk if i actually need this rn
 
