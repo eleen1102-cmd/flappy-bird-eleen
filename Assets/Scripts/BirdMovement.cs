@@ -34,7 +34,7 @@ public class BirdMovement : MonoBehaviour
    
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal"); //idk if i actually need this rn
+        horizontalInput = Input.GetAxis("Horizontal"); 
 
         if (Input.GetKey(KeyCode.Space))
             Jump();
