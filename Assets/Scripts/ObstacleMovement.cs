@@ -4,7 +4,6 @@ public class ObstacleMovement : MonoBehaviour
 {
     public float moveSpeed = 1f;
 
-    //for the floor* might be using the obstacle prefab position instead, which is why it takes longer to show up
     // Update is called once per frame
     void FixedUpdate()
     {
